@@ -138,7 +138,7 @@ public class CirclePanel extends JPanel {
     }
 
 
-    private void printCircles() {
+    public void printCircles() {
 
         CirclesPrintUtil cpu = new CirclesPrintUtil(this);
         cpu.print();
