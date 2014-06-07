@@ -16,9 +16,9 @@ import java.awt.geom.Point2D;
 public class CirclePanel extends JPanel {
 
     private int numberOfCircles = 4;
-    private int numberOfNested = 52;
-    private int numberOfLines = 500;
-    private float scale = 50.0f;
+    private int numberOfNested = 52; // number from the inside to the outside (needs to be divisible by 4)
+    private int numberOfLines = 5000;
+    private float scale = 500.0f;   // simple zoom
 
     public CirclePanel() {
         this.setBackground(Color.white);
@@ -68,6 +68,7 @@ public class CirclePanel extends JPanel {
         draw(g, width, numberOfNested / 4);
         draw(g, width, numberOfNested);
         draw(g, width, numberOfNested * 4);
+        draw(g, width, numberOfNested * 16);
     }
 
     private void draw(Graphics2D g, double width, int numberOfNested) {
